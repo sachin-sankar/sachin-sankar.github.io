@@ -6,10 +6,10 @@ import MailIcon from "./icons/MailIcon";
 import SubstackIcon from "./icons/SubstackIcon";
 
 function App() {
-  const iconClasses = `w-[9%] lg:md:w-[3%] lg:md:hover:scale-150 transition-all cursor-pointer`;
+  const iconClasses = `w-[9%] md:w-[6%] lg:w-[3%] lg:md:hover:scale-150 transition-all cursor-pointer`;
   return (
-    <div className="w-screen h-screen flex flex-col justify-center bg-poster-blue gap-10">
-      <div className="flex flex-col items-center text-poster-yellow font-sekuya text-6xl lg:text-[13em] lg:leading-45  lg:mr-4">
+    <div className="w-screen h-screen flex flex-col justify-center bg-black gap-10">
+      <div className="flex flex-col items-center text-poster-yellow font-sekuya text-6xl md:text-8xl lg:text-[13em] lg:leading-45  lg:mr-4">
         <span>Sachin</span>
         <span>Sankar</span>
       </div>
