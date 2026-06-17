@@ -34,8 +34,6 @@ jobs:
       # 1. Install and set up pnpm before Node
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10 # Adjust version if your local project targets a specific pnpm version
 
       - name: Set up Node
         uses: actions/setup-node@v4
