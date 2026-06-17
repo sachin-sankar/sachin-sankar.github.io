@@ -6,14 +6,14 @@ import MailIcon from "./icons/MailIcon";
 import SubstackIcon from "./icons/SubstackIcon";
 
 function App() {
-  const iconClasses = `w-[9%] md:w-[6%] lg:w-[3%] lg:md:hover:scale-150 transition-all cursor-pointer`;
+  const iconClasses = `w-full`;
   return (
-    <div className="w-screen h-screen flex flex-col justify-center bg-black gap-10">
-      <div className="flex flex-col items-center text-poster-yellow font-sekuya text-6xl md:text-8xl lg:text-[13em] lg:leading-45  lg:mr-4">
+    <div className="w-screen h-screen flex flex-col justify-center bg-full gap-10">
+      <div className="flex flex-col items-center text-primary font-sekuya text-6xl md:text-8xl lg:text-[13em] lg:leading-45  lg:mr-4">
         <span>Sachin</span>
         <span>Sankar</span>
       </div>
-      <div className="flex justify-center items-center divide-x-2 gap-5 lg:gap-8 ">
+      <div className="grid grid-cols-6 gap-3 md:gap-5 lg:gap-5 w-[75%] md:w-[45%] lg:w-[30%] place-self-center">
         <LinkedIcon
           fill="#0a66c2"
           className={iconClasses}

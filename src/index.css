@@ -3,5 +3,6 @@
 
 @theme {
   --font-sekuya: "Sekuya", system-ui;
-  --color-poster-yellow: #ffed28;
+  --color-primary: #daddd8;
+  --color-full: #1c1c1c;
 }
