@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import GithubIcon from "./icons/github";
 import HashnodeIcon from "./icons/HashnodeIcon";
 import KeyIcon from "./icons/KeyIcon";
@@ -6,6 +7,14 @@ import MailIcon from "./icons/MailIcon";
 import SubstackIcon from "./icons/SubstackIcon";
 
 function App() {
+  useEffect(() => {
+    var main = "Sachin Sankar ";
+    setInterval(() => {
+      var left = main.substring(1);
+      main = left + main[0];
+      document.title = main;
+    }, 500);
+  }, []);
   const iconClasses = `w-full`;
   return (
     <div className="w-screen h-screen flex flex-col justify-center bg-full gap-10">
