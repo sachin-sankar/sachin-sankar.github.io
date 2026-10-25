@@ -26,6 +26,14 @@ const readingTime = Math.max(1, Math.round(wordCount / 200));
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>{post.data.title}</title>
     <meta name="description" content={post.data.description} />
+    <meta property="og:title" content={post.data.title} />
+    <meta property="og:description" content={post.data.description} />
+    <meta property="og:image" content={post.data.banner || "/og-image.jpg"} />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={post.data.title} />
+    <meta name="twitter:description" content={post.data.description} />
+    <meta name="twitter:image" content={post.data.banner || "/og-image.jpg"} />
   </head>
   <body class="bg-zinc-950">
     <BlogPost

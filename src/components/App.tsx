@@ -83,12 +83,6 @@ function App() {
 								icon={Goodreads}
 								href="https://www.goodreads.com/user/show/184093236-sachin-sankar"
 							/>
-							<SocialBadge
-								color="#ff0000"
-								label="YT Recs"
-								icon={Youtube}
-								href="/recs"
-							/>
 						</div>
 					</div>
 					<div className="flex flex-col gap-1">
