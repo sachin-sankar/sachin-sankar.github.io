@@ -83,7 +83,7 @@ export default function BlogPostLayout({
 
 						prose-blockquote:border-l-golden-orange prose-blockquote:text-aqua-haze/70
 						prose-li:marker:text-golden-orange prose-li:-my-3
-						prose-img:rounded-sm
+						prose-img:rounded-sm prose-img:mx-auto
 					"
 				>
 					{children}
