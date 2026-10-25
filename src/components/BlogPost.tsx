@@ -29,44 +29,46 @@ export default function BlogPost({
 	return (
 		<div className="min-h-screen bg-onyx text-aqua-haze font-Questrial flex flex-col selection:bg-golden-orange selection:text-onyx">
 			<Header />
-			<div className="flex flex-col mx-auto px-6 pt-10 gap-8 w-6/10">
+			<div className="flex flex-col lg:mx-auto lg:px-6 pt-10 gap-6 lg:gap-8 w-screen lg:w-6/10">
 				{banner && (
 					<img
 						src={banner}
 						alt={title}
-						className="w-full max-h-100 object-cover rounded-sm border border-aqua-haze/10"
+						className="w-full object-cover max-h-48 lg:max-h-100 lg:rounded-sm border border-aqua-haze/10"
 					/>
 				)}
 
-				<div className="flex flex-col gap-3 pb-7">
-					<h1 className="font-archivo font-extrabold text-4xl sm:text-5xl leading-[1.05] text-aqua-haze">
+				<div className="flex flex-col ps-6 lg:ps-0 gap-3 pb-7">
+					<h1 className="font-archivo lg:font-extrabold text-2xl lg:text-4xl lg:leading-[1.05] text-aqua-haze">
 						{title}
 					</h1>
-					<p className="text-aqua-haze/50 text-lg">
+					<p className="flex flex-col text-aqua-haze/50 text-xs lg:text-lg">
 						<time
 							dateTime={pubDate.toISOString()}
 							className="text-golden-orange"
 						>
 							{formattedDate}
 						</time>
-						<span className="ml-3">{description}</span>
-						<span className="ml-3 text-aqua-haze/35">
-							{readingTime} min read
-						</span>
+						<span>{description}</span>
+						<span className="text-aqua-haze/35">{readingTime} min read</span>
 					</p>
 				</div>
 			</div>
 
-			<main className="w-6/10 mx-auto px-6 pb-20">
+			<main className="w-9/10 lg:w-6/10 lg:mx-auto ps-6 lg:px-6 pb-20">
 				<article
 					className="
 						prose prose-invert max-w-none
-						prose-p:text-xl prose-p:leading-relaxed prose-p:text-aqua-haze/85
+						prose-p:text-sm lg:prose-p:text-xl prose-p:leading-relaxed prose-p:text-aqua-haze/85
 						prose-headings:font-Questrial prose-headings:font-normal prose-headings:text-aqua-haze
 
-						prose-h1:text-4xl prose-h1:my-7 prose-h1:font-semibold
-						prose-h2:text-3xl prose-h2:my-5 prose-h2:font-semibold
-						prose-h3:text-2xl prose-h3:my-3
+						prose-h1:text-2xl prose-h1:my-5 prose-h1:font-semibold
+						prose-h2:text-xl prose-h2:my-3 prose-h2:font-semibold
+						prose-h3:text-lg prose-h3:my-1
+
+						lg:prose-h1:text-4xl lg:prose-h1:my-7 lg:prose-h1:font-semibold
+						lg:prose-h2:text-3xl lg:prose-h2:my-5 lg:prose-h2:font-semibold
+						lg:prose-h3:text-2xl lg:prose-h3:my-3
 
 						prose-a:text-golden-orange prose-a:underline prose-a:decoration-golden-orange/40 prose-a:underline-offset-4
 						hover:prose-a:decoration-golden-orange
@@ -78,6 +80,7 @@ export default function BlogPost({
 						prose-code:px-1.5 prose-code:py-0.5 prose-code:font-normal
 						prose-code:before:content-[''] prose-code:after:content-['']
 						[&_pre_code]:p-0 [&_pre_code]:bg-transparent [&_pre_code]:text-inherit
+            prose-code:text-xs lg:prose-code:text-lg
 
 						prose-pre:bg-[#181818] prose-pre:border prose-pre:border-aqua-haze/10
 						prose-pre:border-l-4 prose-pre:border-l-aqua-haze/20 prose-pre:rounded-sm
