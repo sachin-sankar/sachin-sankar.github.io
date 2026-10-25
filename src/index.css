@@ -1,8 +1,0 @@
-@import url("https://fonts.googleapis.com/css2?family=Sekuya&display=swap");
-@import "tailwindcss";
-
-@theme {
-  --font-sekuya: "Sekuya", system-ui;
-  --color-primary: #daddd8;
-  --color-full: #1c1c1c;
-}

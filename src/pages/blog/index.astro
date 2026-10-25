@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import Blog from "../../components/Blog";
+
+const posts = (await getCollection("blog")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const withReadingTime = posts.map((post) => {
+	const wordCount = post.body?.split(/\s+/).length ?? 0;
+	const readingTime = Math.max(1, Math.round(wordCount / 200));
+	return {
+		slug: post.id,
+		title: post.data.title,
+		description: post.data.description,
+		pubDate: post.data.pubDate,
+		banner: post.data.banner,
+		tags: post.data.tags,
+		readingTime,
+	};
+});
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Blog</title>
+    <meta name="description" content="Articles, notes, and writeups." />
+  </head>
+  <body>
+    <Blog posts={withReadingTime} />
+  </body>
+</html>
