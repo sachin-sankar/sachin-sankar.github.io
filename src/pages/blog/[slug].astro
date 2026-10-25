@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from "astro:content";
+import BlogPost from "../../components/BlogPost";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("blog");
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const wordCount = post.body?.split(/\s+/).length ?? 0;
+const readingTime = Math.max(1, Math.round(wordCount / 200));
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>{post.data.title}</title>
+    <meta name="description" content={post.data.description} />
+    <meta property="og:title" content={post.data.title} />
+    <meta property="og:description" content={post.data.description} />
+    <meta property="og:image" content={post.data.banner || "/og-image.jpg"} />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={post.data.title} />
+    <meta name="twitter:description" content={post.data.description} />
+    <meta name="twitter:image" content={post.data.banner || "/og-image.jpg"} />
+  </head>
+  <body class="bg-zinc-950">
+    <BlogPost
+      title={post.data.title}
+      description={post.data.description}
+      pubDate={post.data.pubDate}
+      banner={post.data.banner}
+      tags={post.data.tags}
+      readingTime={readingTime}
+    >
+      <Content />
+    </BlogPost>
+  </body>
+</html>

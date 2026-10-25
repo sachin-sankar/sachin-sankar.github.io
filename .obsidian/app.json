@@ -1,0 +1,11 @@
+{
+  "userIgnoreFilters": [
+    "node_modules/",
+    "dist/",
+    "src/components/assests/",
+    "src/pages/blog/"
+  ],
+  "attachmentFolderPath": "public/blog-images",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
+}
