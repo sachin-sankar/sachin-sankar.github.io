@@ -8,16 +8,47 @@ import App from "../components/App.tsx";
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sachin Sankar</title>
-    <meta property="og:title" content="Sachin Sankar" />
-    <meta property="og:description" content="Personal website of Sachin Sankar" />
-    <meta property="og:image" content="/og-image.jpg" />
+    <title>Sachin Sankar | Software Engineer & Blogger</title>
+    <meta name="description" content="Personal website of Sachin Sankar, featuring insights on software engineering, security research, and technical blogging." />
+    <link rel="canonical" href="https://sachin-sankar.github.io" />
+    <meta name="theme-color" content="#faa916" />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sachin-sankar.github.io" />
+    <meta property="og:title" content="Sachin Sankar | Software Engineer & Blogger" />
+    <meta property="og:description" content="Personal website of Sachin Sankar, featuring insights on software engineering, security research, and technical blogging." />
+    <meta property="og:image" content="https://sachin-sankar.github.io/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sachin Sankar's Personal Website OG Image" />
+    <meta property="og:site_name" content="Sachin Sankar" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sachin Sankar" />
-    <meta name="twitter:description" content="Personal website of Sachin Sankar" />
-    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="twitter:url" content="https://sachin-sankar.github.io" />
+    <meta name="twitter:title" content="Sachin Sankar | Software Engineer & Blogger" />
+    <meta name="twitter:description" content="Personal website of Sachin Sankar, featuring insights on software engineering, security research, and technical blogging." />
+    <meta name="twitter:image" content="https://sachin-sankar.github.io/og-image.jpg" />
+    <meta name="twitter:site" content="@sachinsankar" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sachin Sankar",
+        "url": "https://sachin-sankar.github.io",
+        "jobTitle": "Software Engineer",
+        "sameAs": [
+          "https://github.com/sachinsankar",
+          "https://twitter.com/sachinsankar"
+        ]
+      }
+    </script>
   </head>
   <body style="background-color: #111112;">
     <App client:load  />
