@@ -1,4 +1,4 @@
-import { GitBranch, GitPullRequestArrow } from "lucide-react";
+import { ExternalLink, GitBranch, GitPullRequestArrow } from "lucide-react";
 
 interface PullRequest {
 	html_url: string;
@@ -54,8 +54,9 @@ export default function RecentPRs({ prs }: { prs: PullRequest[] | null }) {
 								<span className="text-white-smoke text-sm lg:text-lg truncate group-hover:text-golden-orange transition-colors">
 									{pr.title}
 								</span>
-								<span className="text-white-smoke/40 text-xs lg:text-sm truncate">
+								<span className="flex items-center gap-1 text-white-smoke/40 text-xs lg:text-sm truncate">
 									{pr.repository_url.split("/").slice(-2).join("/")}
+									<ExternalLink className="h-[1em] w-[1em]" />
 								</span>
 							</div>
 						</a>

@@ -25,7 +25,7 @@ function App() {
 
 	useEffect(() => {
 		fetch(
-			"https://api.github.com/search/issues?q=author:sachin-sankar+type:pr&sort=updated&order=desc&per_page=3",
+			"https://api.github.com/search/issues?q=author:sachin-sankar+type:pr&sort=updated&order=desc&per_page=4",
 		)
 			.then((res) => res.json())
 			.then((data) => setPrs(data.items || []))
