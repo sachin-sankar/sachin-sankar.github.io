@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/suspicious/noArrayIndexKey: <> */
+import { useEffect, useState } from "react";
 import {
 	Blogger,
 	Github,
@@ -12,8 +12,29 @@ import {
 import "../styles/global.css";
 import Logo from "./assests/logo";
 import { SocialBadge } from "./SocialBadge";
+import RecentPRs from "./RecentPRs";
+
+interface PullRequest {
+	html_url: string;
+	title: string;
+	repository_url: string;
+}
 
 function App() {
+	const [prs, setPrs] = useState<PullRequest[] | null>(null);
+
+	useEffect(() => {
+		fetch(
+			"https://api.github.com/search/issues?q=author:sachin-sankar+type:pr&sort=updated&order=desc&per_page=3",
+		)
+			.then((res) => res.json())
+			.then((data) => setPrs(data.items || []))
+			.catch((err) => {
+				console.error("Error fetching PRs:", err);
+				setPrs([]);
+			});
+	}, []);
+
 	return (
 		<div className="w-screen bg-onyx flex flex-col gap-0">
 			<div className="w-screen h-screen flex justify-center items-center bg-[url('/hero-bg.svg')] bg-cover">
@@ -45,6 +66,7 @@ function App() {
 							/>
 						</div>
 					</div>
+					<RecentPRs prs={prs} />
 					<div className="flex flex-col gap-1">
 						<span>
 							Sometimes i write about tech, the human experience, and everything
