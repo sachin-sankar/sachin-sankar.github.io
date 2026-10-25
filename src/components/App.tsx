@@ -23,7 +23,7 @@ function App() {
 				</div>
 			</div>
 
-			<div className="w-screen h-screen grid grid-cols-1 lg:grid-cols-4">
+			<div className="w-screen h-fit lg:h-screen grid grid-cols-1 lg:grid-cols-4">
 				<div className="flex flex-col justify-center gap-8 font-red-rose text-white-smoke/85 text-lg lg:text-4xl self-center p-4 lg:ps-8 col-span-3">
 					<div className="flex flex-col gap-1">
 						<span>
@@ -102,6 +102,9 @@ function App() {
 				</div>
 				<div className="relative overflow-hidden hidden lg:block">
 					<Logo className="absolute -right-24 -top-24 w-full animate-[spin_60s_linear_infinite] fill-golden-orange" />
+				</div>
+				<div className="flex justify-center lg:hidden overflow-hidden">
+					<Logo className="w-4/10 translate-y-1/2 animate-[spin_60s_linear_infinite] fill-golden-orange" />
 				</div>
 			</div>
 		</div>
