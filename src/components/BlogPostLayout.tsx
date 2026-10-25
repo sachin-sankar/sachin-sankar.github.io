@@ -34,7 +34,7 @@ export default function BlogPostLayout({
 					<img
 						src={banner}
 						alt={title}
-						className="w-full object-cover rounded-sm border border-aqua-haze/10"
+						className="w-full max-h-100 object-cover rounded-sm border border-aqua-haze/10"
 					/>
 				)}
 
