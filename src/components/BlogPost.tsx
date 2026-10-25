@@ -38,7 +38,7 @@ export default function BlogPost({
 					/>
 				)}
 
-				<div className="flex flex-col gap-3 pb-7 border-b border-aqua-haze/15">
+				<div className="flex flex-col gap-3 pb-7">
 					<h1 className="font-archivo font-extrabold text-4xl sm:text-5xl leading-[1.05] text-aqua-haze">
 						{title}
 					</h1>
@@ -64,8 +64,9 @@ export default function BlogPost({
 						prose-p:text-xl prose-p:leading-relaxed prose-p:text-aqua-haze/85
 						prose-headings:font-Questrial prose-headings:font-normal prose-headings:text-aqua-haze
 
-						prose-h2:text-3xl prose-h2:mt-14 prose-h2:pl-4 prose-h2:border-l-2 prose-h2:border-golden-orange
-						prose-h3:text-2xl prose-h3:mt-9
+						prose-h1:text-4xl prose-h1:my-7 prose-h1:font-semibold
+						prose-h2:text-3xl prose-h2:my-5 prose-h2:font-semibold
+						prose-h3:text-2xl prose-h3:my-3
 
 						prose-a:text-golden-orange prose-a:underline prose-a:decoration-golden-orange/40 prose-a:underline-offset-4
 						hover:prose-a:decoration-golden-orange
