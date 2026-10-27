@@ -117,7 +117,7 @@ function App() {
 								color="#0093DD"
 								label="GPG Public Key"
 								icon={GnuPrivacyGuard}
-								href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xa33ba241b4bc8310df63e510a536f62f57c64035"
+								href="https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xce180450a43aa794f94ab7726ba02585c77faf0d"
 							/>
 						</div>
 					</div>
